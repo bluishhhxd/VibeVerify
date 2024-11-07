@@ -61,3 +61,25 @@ You can install all dependencies using the `requirements.txt` file:
 ```bash
 pip install -r requirements.txt
 
+Steps to Run:
+Clone this repository:
+bash
+git clone https://github.com/yourusername/VibeVerify-Project.git
+
+Navigate to the project directory:
+bash
+cd VibeVerify-Project
+
+Install dependencies:
+bash
+pip install -r requirements.txt
+
+Run the Jupyter notebooks:
+Open data_preprocessing.ipynb to preprocess and visualize the data.
+Open model_training.ipynb to train multiple machine learning models and evaluate their performance.
+Optional: Spectrogram Images
+If you want to include spectrogram images for CNN-based models or visualization purposes, you can place them in the images/ folder.
+Data Visualization
+The following visualizations are included in the notebooks:
+Box plots showing how MFCCs and spectral features are distributed across different genres.
+Count plot showing the distribution of genres in the dataset.
