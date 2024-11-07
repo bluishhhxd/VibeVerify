@@ -58,7 +58,7 @@ Make sure you have Python installed along with the following libraries:
 
 You can install all dependencies using the `requirements.txt` file:
 
-```bash
+bash
 pip install -r requirements.txt
 
 Steps to Run:
