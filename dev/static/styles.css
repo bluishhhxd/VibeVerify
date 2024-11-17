@@ -1,0 +1,199 @@
+  /* Global Styles */
+  body {
+    background: linear-gradient(to bottom, #0d0e1c, #1a2537);
+    font-family: 'Arial', sans-serif;
+    color: white;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    color: #f8fafc;
+  }
+
+  /* Hero Section */
+  #hero {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://plus.unsplash.com/premium_photo-1683140707316-42df87760f3f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+  }
+
+  #hero h1 {
+    font-size: 4rem;
+  }
+
+  #hero p {
+    font-size: 1.5rem;
+  }
+
+  #hero .btn-primary {
+    background-color: #fdfdfd;
+  }
+
+  /* Footer */
+  .footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  #performance {
+    padding-top: 40px; /* Add space between heading and content */
+  }
+
+  #performance h2 {
+    text-align: center;
+    margin-bottom: 45px; /* Space below the heading */
+  }
+
+
+
+  /* Circular Progress Bars */
+  #performance-bars {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+    flex-wrap: wrap; /* Allows wrapping if there isn't enough space */
+    gap: 20px; /* Even spacing between circles */
+  }
+
+
+  /* Base styling for progress circles */
+  .progress-circle {
+    width: 125px;
+    height: 125px;
+    border: 5px solid #374151; /* Default static border */
+    border-radius: 50%;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #1b232f;
+    font-size: 16px;
+    overflow: hidden; /* Required for masking */
+    transition: all 0.3s ease;
+    /* background: #1f2937;   */
+  }
+
+  /* Pseudo-element for hover effects */
+  .progress-circle::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    background: transparent; /* Initially transparent */
+    z-index: -1;
+    transition: all 0.3s ease; /* Smooth transition */
+    background: #374151;
+  }
+
+  /* Gradients for each model */
+  .progress-circle.p70:hover::before {
+    background: conic-gradient(
+      #34d399 calc(70%), /* Green for SVM */
+      #374151 calc(70%)
+    );
+  }
+
+  .progress-circle.p69:hover::before {
+    background: conic-gradient(
+      #4c51bf calc(69%), /* Blue for Logistic Regression */
+      #374151 calc(69%)
+    );
+  }
+
+  .progress-circle.p65:hover::before {
+    background: conic-gradient(
+      #f59e0b calc(65.5%), /* Yellow for KNN and Random Forest */
+      #374151 calc(65.5%)
+    );
+  }
+
+  .progress-circle.p46:hover::before {
+    background: conic-gradient(
+      #ef4444 calc(46.5%), /* Red for Decision Tree */
+      #374151 calc(46.5%)
+    );
+  }
+
+  /* Inner content (icon and text) */
+  .progress-circle .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    z-index: 1;
+  }
+
+  .progress-circle i {
+    font-size: 2rem;
+  }
+
+  .progress-circle .name {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+
+  /* Show accuracy percentage on hover */
+  .progress-circle .accuracy {
+    display: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .progress-circle:hover .content {
+    display: none;
+  }
+
+  .progress-circle:hover .accuracy {
+    display: block;
+  }
+
+  /* Custom accuracy percentages */
+  .progress-circle.p70 {
+    --accuracy: 70; /* SVM: 70% */
+  }
+
+  .progress-circle.p69 {
+    --accuracy: 69; /* Logistic: 69% */
+  }
+
+  .progress-circle.p65 {
+    --accuracy: 65; /* KNN and Random Forest: 65% */
+  }
+
+  .progress-circle.p46 {
+    --accuracy: 46; /* Decision Tree: 46% */
+  }
+
+
+
+
+  /* Timeline */
+  .timeline {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .timeline-item {
+    text-align: center;
+    max-width: 200px;
+  }
+
+  .timeline-item i {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+
+  .timeline-item h4 {
+    font-size: 1.1rem;
+  }
